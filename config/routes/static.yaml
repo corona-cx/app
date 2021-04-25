@@ -1,0 +1,11 @@
+impress:
+  path: /impressum
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+  defaults:
+    template: static/impress.html.twig
+
+privacy:
+  path: /datenschutz
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+  defaults:
+    template: static/privacy.html.twig
