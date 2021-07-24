@@ -13,3 +13,7 @@ import '@fortawesome/fontawesome-pro/js/fontawesome.min';
 
 // start the Stimulus application
 import './bootstrap';
+
+import LocateButton from './modules/LocateButton';
+
+export {LocateButton};

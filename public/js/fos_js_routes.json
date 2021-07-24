@@ -1,0 +1,1 @@
+{"base_url":"","routes":{"display_coords":{"tokens":[["text","\/coords"]],"defaults":[],"requirements":[],"hosttokens":[],"methods":[],"schemes":[]},"display_city":{"tokens":[["variable","\/","[^\/]++","slug",true]],"defaults":[],"requirements":[],"hosttokens":[],"methods":[],"schemes":[]}},"prefix":"","host":"localhost","port":"","scheme":"http","locale":[]}
