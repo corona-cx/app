@@ -4,6 +4,14 @@
 
 {% block content %}
     <div class="row">
+        <div class="col text-center">
+            <p class="lead">
+                Der aktuelle Inzidenzwert aus {{ area_name }}:
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-12 col-sm-6 offset-sm-3">
             {{ corona_macros.incidence_box(incidence, date_time) }}
         </div>
