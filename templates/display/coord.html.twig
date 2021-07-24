@@ -1,21 +1,11 @@
 {% extends 'layout.html.twig' %}
 
+{% import '_macros.html.twig' as corona_macros %}
+
 {% block content %}
     <div class="row">
         <div class="col-12 col-sm-6 offset-sm-3">
-            <div class="card text-white bg-danger">
-                <div class="card-body">
-                    <p class="card-text text-center" style="font-size: 72px;">
-                        {{ incidence|number_format(2, ',', '.') }}
-                    </p>
-
-                    <p class="card-text text-center">
-                        <small>
-                            Zuletzt aktualisiert: {{ date_time|date('d.m.Y') }}
-                        </small>
-                    </p>
-                </div>
-            </div>
+            {{ corona_macros.incidence_box(incidence, date_time) }}
         </div>
     </div>
 {% endblock %}

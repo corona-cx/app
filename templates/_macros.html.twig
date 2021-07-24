@@ -1,0 +1,15 @@
+{% macro incidence_box(incidence, date_time) %}
+<div class="card text-white bg-danger">
+    <div class="card-body">
+        <p class="card-text text-center" style="font-size: 72px;">
+            {{ incidence|number_format(2, ',', '.') }}
+        </p>
+
+        <p class="card-text text-center">
+            <small>
+                Zuletzt aktualisiert: {{ date_time|date('d.m.Y') }}
+            </small>
+        </p>
+    </div>
+</div>
+{% endmacro %}
