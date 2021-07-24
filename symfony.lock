@@ -17,6 +17,18 @@
     "doctrine/lexer": {
         "version": "1.2.1"
     },
+    "friendsofsymfony/jsrouting-bundle": {
+        "version": "2.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.3",
+            "ref": "a9f2e49180f75cdc71ae279a929c4b2e0638de84"
+        },
+        "files": [
+            "config/routes/fos_js_routing.yaml"
+        ]
+    },
     "nikic/php-parser": {
         "version": "v4.10.4"
     },
@@ -159,6 +171,9 @@
             "config/routes.yaml"
         ]
     },
+    "symfony/serializer": {
+        "version": "v5.2.11"
+    },
     "symfony/service-contracts": {
         "version": "v2.4.0"
     },
@@ -218,5 +233,8 @@
     },
     "twig/twig": {
         "version": "v3.3.0"
+    },
+    "willdurand/jsonp-callback-validator": {
+        "version": "v1.1.0"
     }
 }
