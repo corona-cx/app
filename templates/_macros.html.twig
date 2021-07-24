@@ -1,15 +1,28 @@
 {% macro incidence_box(incidence, date_time) %}
-<div class="card text-white bg-danger">
-    <div class="card-body">
-        <p class="card-text text-center" style="font-size: 72px;">
-            {{ incidence|number_format(2, ',', '.') }}
-        </p>
+    {% set background_color = 'bg-danger' %}
+    {% set text_color = 'text-white' %}
 
-        <p class="card-text text-center">
-            <small>
-                Zuletzt aktualisiert: {{ date_time|date('d.m.Y') }}
-            </small>
-        </p>
+    {% if incidence < 35 %}
+        {% set background_color = 'bg-warning' %}
+        {% set text_color = 'text-black' %}
+    {% endif %}
+
+    {% if incidence < 10 %}
+        {% set background_color = 'bg-success' %}
+        {% set text_color = 'text-white' %}
+    {% endif %}
+
+    <div class="card {{ text_color }} {{ background_color }}">
+        <div class="card-body">
+            <p class="card-text text-center" style="font-size: 72px;">
+                {{ incidence|number_format(2, ',', '.') }}
+            </p>
+
+            <p class="card-text text-center">
+                <small>
+                    Zuletzt aktualisiert: {{ date_time|date('d.m.Y') }}
+                </small>
+            </p>
+        </div>
     </div>
-</div>
 {% endmacro %}

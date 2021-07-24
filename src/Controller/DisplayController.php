@@ -15,7 +15,7 @@ class DisplayController extends AbstractController
         $latitude = (float) $request->query->get('latitude');
         $longitude = (float) $request->query->get('longitude');
 
-        $apiUrl = sprintf('https://localhost:8000/?latitude=%f&longitude=%f', $latitude, $longitude);
+        $apiUrl = sprintf('https://api.corona.cx/?latitude=%f&longitude=%f', $latitude, $longitude);
 
         $content = file_get_contents($apiUrl);
 
