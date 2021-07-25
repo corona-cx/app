@@ -23,7 +23,7 @@ class FrontpageController extends AbstractController
     {
         $query = $request->request->get('query');
 
-        $geocodeQuery = GeocodeQuery::create($query);
+        $geocodeQuery = GeocodeQuery::create(sprintf('%s, Germany', $query));
 
         /** @var AddressCollection $result */
         $result = $nominatimGeocoder->geocodeQuery($geocodeQuery);
