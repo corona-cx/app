@@ -33,8 +33,11 @@ class DisplayController extends AbstractController
     }
 
     #[Route('/{slug}', name: 'display_city', options: ['expose' => true])]
-    public function displayCity(): Response
+    public function displayCity(Request $request): Response
     {
+
+
+
         return $this->render('frontpage/index.html.twig');
     }
 }

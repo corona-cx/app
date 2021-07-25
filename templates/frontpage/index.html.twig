@@ -11,16 +11,18 @@
 
     <div class="row">
         <div class="col-12 col-md-6 offset-md-3">
-            <div class="input-group input-group-lg mb-3">
-                <input type="text" class="form-control" placeholder="Dein Ort oder Landkreis"
-                       aria-label="Dein Ort Oder Landkreis" aria-describedby="button-addon">
-                <button class="btn btn-outline-secondary" type="button" id="button-submit">
-                    Weiter
-                </button>
-                <button class="btn btn-outline-secondary locate-position" type="button" id="button-locate">
-                    <i class="fas fa-location-arrow"></i>
-                </button>
-            </div>
+            <form action="{{ path('query') }}" method="POST">
+                <div class="input-group input-group-lg mb-3">
+                    <input name="query" type="text" class="form-control" placeholder="Dein Ort oder Landkreis"
+                           aria-label="Dein Ort Oder Landkreis" aria-describedby="button-addon">
+                    <button class="btn btn-outline-secondary" type="button" id="button-submit">
+                        Weiter
+                    </button>
+                    <button class="btn btn-outline-secondary locate-position" type="button" id="button-locate">
+                        <i class="fas fa-location-arrow"></i>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 {% endblock %}
