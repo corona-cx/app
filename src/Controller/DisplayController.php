@@ -31,10 +31,4 @@ class DisplayController extends AbstractController
             'incidence' => $incidence,
         ]);
     }
-
-    #[Route('/{slug}', name: 'display_city', options: ['expose' => true])]
-    public function displayCity(): Response
-    {
-        return $this->render('frontpage/index.html.twig');
-    }
 }
